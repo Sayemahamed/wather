@@ -2,7 +2,7 @@ let element = (data) => document.querySelector(data);
 let API_KEY = `eaa92d0dd4dfe047dd95baa27cfb37b6`;
 let getGeoCord = (name) => {
   fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${name}&limit=1&appid=${API_KEY}`
+    `https://api.openweathermap.org/geo/1.0/direct?q=${name}&limit=1&appid=${API_KEY}`
   )
     .then((res) => res.json())
     .then((cord) => {
