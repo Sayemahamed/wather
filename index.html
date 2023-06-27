@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="icon" href="resource/icon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="bar">
+        <div id="burger">
+          <img src="resource/burger.svg" alt="none" />
+          <div id="weather"><a href="">Weather</a></div>
+          <div id="about"><a href="">About</a></div>
+          <div id="guide"><a href="">Usage Guide</a></div>
+        </div>
+        <div id="space"></div>
+        <input
+          id="input"
+          type="text"
+          placeholder="Search By City Name"
+          spellcheck="true"
+        />
+        <input id="button" type="button" value="Search" />
+      </div>
+      <h1>Weather of <span id="cityName">---</span> city</h1>
+      <main>
+        <div>
+          <h2>Temperature</h2>
+          <h1 id="temperature">-</h1>
+          <p>Max Temperature : <span id="maxTemperature">-</span></p>
+          <p>Min Temperature : <span id="minTemperature">-</span></p>
+          <p>Feels Like : <span id="feelTemperature">-</span></p>
+        </div>
+        <div>
+          <h2>Wind</h2>
+          <h1 id="windSpeed">-</h1>
+          <p>Humidity : <span id="humidity">-</span></p>
+          <p>Air Pressure : <span id="airPressure">-</span></p>
+          <p>Sea Level : <span id="seaLevel">-</span></p>
+        </div>
+      </main>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

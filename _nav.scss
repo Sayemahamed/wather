@@ -1,0 +1,115 @@
+// @mixin hoberEffect{
+// }
+a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+}
+.bar {
+  background-color: transparent;
+  display: grid;
+  height: 50px;
+}
+@media (width > 768px) {
+  .bar {
+    grid-template-areas: "Bu Bu Bu Sp S B";
+    #burger {
+      img {
+        display: none;
+      }
+      display: flex;
+    }
+  }
+}
+@media (width < 767px) {
+  .bar {
+    grid-template-areas: "Bu Sp S B";
+    #about {
+      position: absolute;
+      display: none;
+    }
+    #weather {
+      position: absolute;
+      display: none;
+    }
+    #guide {
+      position: absolute;
+      display: none;
+    }
+    #burger {
+      display: grid;
+      border-radius: 10px;
+      background-color: #282a62;
+      img {
+        height: 42px;
+        margin: auto;
+      }
+      &:hover {
+        #weather {
+          display: block;
+          top: 51px;
+        }
+        #about {
+          display: block;
+          top: 96px;
+        }
+        #guide {
+          display: block;
+          top: 140.5px;
+        }
+      }
+    }
+  }
+}
+#space {
+  grid-area: Sp;
+}
+#about {
+  width: 120px;
+  margin: 0px 2px;
+  background-color: #282a62;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 0px;
+}
+#weather {
+  width: 120px;
+  margin: 0px 2px;
+  background-color: #282a62;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 0px;
+}
+#guide {
+  width: 120px;
+  margin: 0px 2px;
+  background-color: #282a62;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px 0px;
+}
+#burger {
+  grid-area: Bu;
+}
+#input {
+  border-radius: 10px;
+  padding: 10px 20px;
+  margin-right: 4px;
+  grid-area: S;
+  border: none;
+  font-weight: 600;
+  &:focus {
+    outline: none;
+  }
+}
+#button {
+  border-radius: 10px;
+  margin-right: 4px;
+  grid-area: B;
+  background-color: white;
+  border: 2px aliceblue solid;
+  font-weight: 600;
+  &:focus {
+    outline: invert;
+  }
+}
